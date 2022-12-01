@@ -169,7 +169,7 @@ public class FirebasePlugin extends CordovaPlugin {
         applicationContext = cordovaActivity.getApplicationContext();
         final Bundle extras = cordovaActivity.getIntent().getExtras();
         FirebasePlugin.cordovaInterface = this.cordova;
-        firebaseCrashlytics = FirebaseCrashlytics.getInstance();
+        
         this.cordova.getThreadPool().execute(new Runnable() {
             public void run() {
                 try {
@@ -195,7 +195,7 @@ public class FirebasePlugin extends CordovaPlugin {
 
                     firestore = FirebaseFirestore.getInstance();
                     functions = FirebaseFunctions.getInstance();
-
+                    firebaseCrashlytics = FirebaseCrashlytics.getInstance();
                     gson = new GsonBuilder()
                     .registerTypeAdapter(Double.class, new JsonSerializer<Double>() {
                         public JsonElement serialize(Double src, Type typeOfSrc, JsonSerializationContext context) {

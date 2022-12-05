@@ -1,3 +1,7 @@
+
+# Version 13.0.2-cli
+* (Android) Fix android:exported="false" on service with intent filter
+
 # Version 13.0.1-cli
 * (iOS) Fix `onTokenRefresh` to return FCM token (not installation auth token).
     * Resolves [#637](https://github.com/dpa99c/cordova-plugin-firebasex/issues/637)
